@@ -1,7 +1,7 @@
 defaults: &defaults
   working_directory: ~/shadow
   docker:
-    - image: circleci/openjdk:8-jdk
+    - image: circleci/openjdk:11-jdk
   environment:
     - TERM: "dumb"
     - GRADLE_OPTS: "-Xmx1024m"
@@ -12,7 +12,8 @@ jobs:
     <<: *defaults
     steps:
       - checkout
-
+      - run: curl -k -o /tmp/gd_bundle-g2.crt https://certs.godaddy.com/repository/gd_bundle-g2.crt
+      - run: sudo /usr/bin/keytool -importcert -alias gd_bundle-g2 -cacerts -file /tmp/gd_bundle-g2.crt -storepass changeit
       - restore_cache:
           keys:
             - v1-gradle-{{ .Branch }}-{{ checksum "gradle/wrapper/gradle-wrapper.properties" }}-{{ checksum "gradle/dependencies.gradle" }}
