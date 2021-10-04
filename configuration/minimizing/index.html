@@ -7,7 +7,7 @@
     <meta name="generator" content="VuePress 1.6.0">
     
     <meta name="description" content="">
-    <link rel="preload" href="/shadow/assets/css/0.styles.ede77536.css" as="style"><link rel="preload" href="/shadow/assets/js/app.749ef1ec.js" as="script"><link rel="preload" href="/shadow/assets/js/2.b2952356.js" as="script"><link rel="preload" href="/shadow/assets/js/16.5d900465.js" as="script"><link rel="prefetch" href="/shadow/assets/js/10.40605722.js"><link rel="prefetch" href="/shadow/assets/js/11.aa32d70c.js"><link rel="prefetch" href="/shadow/assets/js/12.157db6a5.js"><link rel="prefetch" href="/shadow/assets/js/13.2f394a53.js"><link rel="prefetch" href="/shadow/assets/js/14.66749f1e.js"><link rel="prefetch" href="/shadow/assets/js/15.de79c684.js"><link rel="prefetch" href="/shadow/assets/js/17.6c5db8b1.js"><link rel="prefetch" href="/shadow/assets/js/18.5c2bdb5d.js"><link rel="prefetch" href="/shadow/assets/js/19.1d2f81c8.js"><link rel="prefetch" href="/shadow/assets/js/20.c646c266.js"><link rel="prefetch" href="/shadow/assets/js/21.69e33d99.js"><link rel="prefetch" href="/shadow/assets/js/22.01d30075.js"><link rel="prefetch" href="/shadow/assets/js/23.68ab68e6.js"><link rel="prefetch" href="/shadow/assets/js/24.ea35efd4.js"><link rel="prefetch" href="/shadow/assets/js/3.0dfc1bcd.js"><link rel="prefetch" href="/shadow/assets/js/4.4deef9ed.js"><link rel="prefetch" href="/shadow/assets/js/5.771c4330.js"><link rel="prefetch" href="/shadow/assets/js/6.e416f727.js"><link rel="prefetch" href="/shadow/assets/js/7.1eb472b6.js"><link rel="prefetch" href="/shadow/assets/js/8.d66340a5.js"><link rel="prefetch" href="/shadow/assets/js/9.3944cdda.js">
+    <link rel="preload" href="/shadow/assets/css/0.styles.ede77536.css" as="style"><link rel="preload" href="/shadow/assets/js/app.7c960c5e.js" as="script"><link rel="preload" href="/shadow/assets/js/2.b2952356.js" as="script"><link rel="preload" href="/shadow/assets/js/16.4c1ae7f8.js" as="script"><link rel="prefetch" href="/shadow/assets/js/10.f7c0139a.js"><link rel="prefetch" href="/shadow/assets/js/11.b73513c0.js"><link rel="prefetch" href="/shadow/assets/js/12.dc7c125d.js"><link rel="prefetch" href="/shadow/assets/js/13.bd5f3719.js"><link rel="prefetch" href="/shadow/assets/js/14.d2891ee8.js"><link rel="prefetch" href="/shadow/assets/js/15.07d3e3a9.js"><link rel="prefetch" href="/shadow/assets/js/17.4719962d.js"><link rel="prefetch" href="/shadow/assets/js/18.dc18b8ff.js"><link rel="prefetch" href="/shadow/assets/js/19.1d2f81c8.js"><link rel="prefetch" href="/shadow/assets/js/20.d5186514.js"><link rel="prefetch" href="/shadow/assets/js/21.6e50a9c1.js"><link rel="prefetch" href="/shadow/assets/js/22.23900399.js"><link rel="prefetch" href="/shadow/assets/js/23.61907fa0.js"><link rel="prefetch" href="/shadow/assets/js/24.48738a84.js"><link rel="prefetch" href="/shadow/assets/js/3.0dfc1bcd.js"><link rel="prefetch" href="/shadow/assets/js/4.4deef9ed.js"><link rel="prefetch" href="/shadow/assets/js/5.771c4330.js"><link rel="prefetch" href="/shadow/assets/js/6.e416f727.js"><link rel="prefetch" href="/shadow/assets/js/7.1eb472b6.js"><link rel="prefetch" href="/shadow/assets/js/8.95d40c1a.js"><link rel="prefetch" href="/shadow/assets/js/9.86ab16f3.js">
     <link rel="stylesheet" href="/shadow/assets/css/0.styles.ede77536.css">
   </head>
   <body>
@@ -23,9 +23,10 @@
 shadowJar <span class="token punctuation">{</span>
   <span class="token function">minimize</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">}</span>
-</code></pre></div><p>A dependency can be excluded from the minimization process thereby forcing it's inclusion the shadow JAR.
+</code></pre></div><p>A dependency can be excluded from the minimization process, thereby forcing it's inclusion the shadow JAR.
 This is useful when the dependency analyzer cannot find the usage of a class programmatically, for example if the class
-is loaded dynamically via <code>Class.forName(String)</code>.</p> <div class="language-groovy extra-class"><pre class="language-groovy"><code><span class="token comment">// Force a class to be retained during minimization</span>
+is loaded dynamically via <code>Class.forName(String)</code>. Each of the <code>group</code>, <code>name</code> and <code>version</code> fields separated by <code>:</code> of
+a <code>dependency</code> is interpreted as a regular expression.</p> <div class="language-groovy extra-class"><pre class="language-groovy"><code><span class="token comment">// Force a class to be retained during minimization</span>
 shadowJar <span class="token punctuation">{</span>
   minimize <span class="token punctuation">{</span>
     <span class="token function">exclude</span><span class="token punctuation">(</span><span class="token function">dependency</span><span class="token punctuation">(</span><span class="token string">'org.scala-lang:.*:.*'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
@@ -46,6 +47,6 @@ excluded as well.</p></blockquote></div> <footer class="page-edit"><div class="e
       </a>
       →
     </span></p></div> </main></div><div class="global-ui"></div></div>
-    <script src="/shadow/assets/js/app.749ef1ec.js" defer></script><script src="/shadow/assets/js/2.b2952356.js" defer></script><script src="/shadow/assets/js/16.5d900465.js" defer></script>
+    <script src="/shadow/assets/js/app.7c960c5e.js" defer></script><script src="/shadow/assets/js/2.b2952356.js" defer></script><script src="/shadow/assets/js/16.4c1ae7f8.js" defer></script>
   </body>
 </html>
